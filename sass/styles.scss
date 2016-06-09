@@ -1,5 +1,73 @@
 @import "compass/reset";
 
-a {
-  color: red;
+@font-face {
+  font-family: 'OfficinaSerifExtraBoldC';
+  src: url('../fonts/OfficinaSerifExtraBoldC.eot');
+  src: url('../fonts/OfficinaSerifExtraBoldC.woff2') format('woff2'),
+  url('../fonts/OfficinaSerifExtraBoldC.woff') format('woff'),
+  url('../fonts/OfficinaSerifExtraBoldC.ttf') format('truetype'),
+  url('../fonts/OfficinaSerifExtraBoldC.svg#OfficinaSerifExtraBoldC') format('svg'),
+  url('../fonts/OfficinaSerifExtraBoldC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OfficinaSerifMediumC';
+  src: url('../fonts/OfficinaSerifMediumC.eot');
+  src: url('../fonts/OfficinaSerifMediumC.woff2') format('woff2'),
+  url('../fonts/OfficinaSerifMediumC.woff') format('woff'),
+  url('../fonts/OfficinaSerifMediumC.ttf') format('truetype'),
+  url('../fonts/OfficinaSerifMediumC.svg#OfficinaSerifMediumC') format('svg'),
+  url('../fonts/OfficinaSerifMediumC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$mainColor: rgb(255, 48, 0);
+
+$officinaEB: 'OfficinaSerifExtraBoldC';
+$officinaM: 'OfficinaSerifMediumC';
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 10px 40px 0 40px;
+
+  .left {
+    img {
+      height: 70px;
+    }
+  }
+  .center {
+    flex: 1 0 100px;
+    height: 70px;
+    background-color: $mainColor;
+    min-width: 380px;
+    text-align: center;
+    span {
+      line-height: 70px;
+      font-family: $officinaEB;
+      color: white;
+      font-size: 200%;
+      text-transform: uppercase;
+    }
+  }
+  .right {
+    img {
+      height: 70px;
+    }
+  }
+}
+
+.content {
+  padding: 0 20%;
+  text-align: center;
+  margin-top: 20px;
+  p {
+    font-family: $officinaM;
+    text-transform: uppercase;
+    color: $mainColor;
+    min-width: 275px;
+  }
 }

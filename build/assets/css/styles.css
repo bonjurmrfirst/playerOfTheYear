@@ -1,0 +1,135 @@
+/* line 5, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'OfficinaSerifExtraBoldC';
+  src: url("../fonts/OfficinaSerifExtraBoldC.eot");
+  src: url("../fonts/OfficinaSerifExtraBoldC.woff2") format("woff2"), url("../fonts/OfficinaSerifExtraBoldC.woff") format("woff"), url("../fonts/OfficinaSerifExtraBoldC.ttf") format("truetype"), url("../fonts/OfficinaSerifExtraBoldC.svg#OfficinaSerifExtraBoldC") format("svg"), url("../fonts/OfficinaSerifExtraBoldC.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OfficinaSerifMediumC';
+  src: url("../fonts/OfficinaSerifMediumC.eot");
+  src: url("../fonts/OfficinaSerifMediumC.woff2") format("woff2"), url("../fonts/OfficinaSerifMediumC.woff") format("woff"), url("../fonts/OfficinaSerifMediumC.ttf") format("truetype"), url("../fonts/OfficinaSerifMediumC.svg#OfficinaSerifMediumC") format("svg"), url("../fonts/OfficinaSerifMediumC.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 32, ../../../sass/styles.scss */
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 10px 40px 0 40px;
+}
+/* line 38, ../../../sass/styles.scss */
+.header .left img {
+  height: 70px;
+}
+/* line 42, ../../../sass/styles.scss */
+.header .center {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 100px;
+  -moz-box-flex: 1;
+  -ms-flex: 1 0 100px;
+  flex: 1 0 100px;
+  height: 70px;
+  background-color: #ff3000;
+  min-width: 380px;
+  text-align: center;
+}
+/* line 48, ../../../sass/styles.scss */
+.header .center span {
+  line-height: 70px;
+  font-family: "OfficinaSerifExtraBoldC";
+  color: white;
+  font-size: 200%;
+  text-transform: uppercase;
+}
+/* line 57, ../../../sass/styles.scss */
+.header .right img {
+  height: 70px;
+}
+
+/* line 63, ../../../sass/styles.scss */
+.content {
+  padding: 0 20%;
+  text-align: center;
+  margin-top: 20px;
+}
+/* line 67, ../../../sass/styles.scss */
+.content p {
+  font-family: "OfficinaSerifMediumC";
+  text-transform: uppercase;
+  color: #ff3000;
+  min-width: 275px;
+}
