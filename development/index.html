@@ -30,8 +30,17 @@
     </div>
 
     <div class="playersContainer">
-        <div ng-repeat="player in players">
-            {{player.surname}}
+        <div class="player" ng-repeat="player in players">
+            <div class="playerBg"> <img src="assets/img/playerBg.png"></div>
+            <img ng-src="assets/img/{{player.src}}.png">
+            <div class="playerName">
+                <p>{{player.name}}&nbsp</p>
+                <p>{{player.surname | uppercase}}</p>
+            </div>
+            <div class="playerInfo">
+                <span class="count">{{player.count}}</span>
+                <span class="month">{{player.month}}</span>
+            </div>
         </div>
     </div>
 </body>

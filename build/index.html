@@ -1,4 +1,4 @@
-<html>
+<html ng-app="playerOfTheYear">
 <head>
     <meta charset="utf-8">
     <title>Лучший игрок сезона</title>
@@ -9,24 +9,35 @@
 
     <script src="app/app.js"></script>
 </head>
-<body>
-    <div class="header">
-        <div class="left">
-            <img src="assets/img/headerLeft.png">
-        </div>
-        <div class="center">
-            <span>Лучший игрок сезона</span>
-        </div>
-        <div class="left">
-            <img src="assets/img/headerRight.png">
+<body ng-controller="MainController">
+<div class="header">
+    <div class="left">
+        <img src="assets/img/headerLeft.png">
+    </div>
+    <div class="center">
+        <span>Лучший игрок сезона</span>
+    </div>
+    <div class="left">
+        <img src="assets/img/headerRight.png">
+    </div>
+</div>
+<div class="content">
+    <p>
+        Принимайте участие в интерактивном голосовании!
+        Сделайте свой выбор лучшего футболиста «Шахтера» по итогам сезона.
+        Имя победителя будет оглашено на официальном сайте клуба.
+    </p>
+</div>
+
+<div class="playersContainer">
+    <div class="player" ng-repeat="player in players">
+        <div class="playerBg"> <img src="assets/img/playerBg.png"></div>
+        <img src="assets/img/{{player.surname}}.png">
+        <div class="playerName">
+            <p>{{player.name}}</p>
+            <p>{{player.surname | filter: uppercase}}</p>
         </div>
     </div>
-    <div class="content">
-        <p>
-            Принимайте участие в интерактивном голосовании!
-            Сделайте свой выбор лучшего футболиста «Шахтера» по итогам сезона.
-            Имя победителя будет оглашено на официальном сайте клуба.
-        </p>
-    </div>
+</div>
 </body>
 </html>

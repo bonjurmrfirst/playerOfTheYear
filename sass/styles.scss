@@ -24,10 +24,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'OfficinaSerifBookC';
+  src: url('../fonts/OfficinaSerifBookC.eot');
+  src: url('../fonts/OfficinaSerifBookC.woff2') format('woff2'),
+  url('../fonts/OfficinaSerifBookC.woff') format('woff'),
+  url('../fonts/OfficinaSerifBookC.ttf') format('truetype'),
+  url('../fonts/OfficinaSerifBookC.svg#OfficinaSerifBookC') format('svg'),
+  url('../fonts/OfficinaSerifBookC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 $mainColor: rgb(255, 48, 0);
+$secondaryColor: rgb(153, 153, 153);
 
 $officinaEB: 'OfficinaSerifExtraBoldC';
 $officinaM: 'OfficinaSerifMediumC';
+$officinaB: 'OfficinaSerifBookC';
 
 .header {
   display: flex;
@@ -61,13 +75,73 @@ $officinaM: 'OfficinaSerifMediumC';
 }
 
 .content {
-  padding: 0 20%;
+  padding: 0 30%;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
   p {
     font-family: $officinaM;
     text-transform: uppercase;
     color: $mainColor;
     min-width: 275px;
+  }
+}
+
+
+.playersContainer {
+  display: flex;
+  margin: 50px 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .player {
+    flex: 1 0 auto;
+    position: relative;
+    margin: 10px 10px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 350px;
+    img {
+      position: absolute;
+      margin-left: 40px;
+      width: 100%;
+    }
+    .playerBg {
+      position: absolute;
+      margin-left: -40px;
+      height: 300px;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .playerName {
+      position: absolute;
+      top: 240px;
+      p {
+        font-family: $officinaEB;
+        font-size: x-large;
+        color: $secondaryColor;
+      }
+    }
+
+    .playerInfo {
+      margin-top: 305px;
+      border-top: 2px solid rgb(75, 75, 75);
+      .count {
+
+      }
+      .month {
+        //float: right;
+        font-family: $officinaB;
+      }
+      .count {
+        display: block;
+        font-family: $officinaM;
+        font-size: 400%;
+        color: $secondaryColor;
+      }
+    }
   }
 }

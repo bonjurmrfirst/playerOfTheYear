@@ -12,38 +12,44 @@ angular
       {
         name: 'Алекс',
         surname: 'Тейшейра',
-        month: 'июль, сентябрь, октябрь, ноябрь, декабрь',
-        count: 5
+        month: 'Лучший в июле, сентябре, октябре, ноябре, декабре',
+        count: 5,
+        src: 'Teixeira'
       },
       {
         name: '',
         surname: 'Марлос',
-        month: 'август, апрель',
-        count: 2
+        month: 'Лучший в августе, апреле',
+        count: 2,
+        src: 'Marlos'
       },
       {
         name: 'Виктор',
         surname: 'Коваленко',
-        month: 'январь',
-        count: 1
+        month: 'Лучший в январе',
+        count: 1,
+        src: 'Kovalenko'
       },
       {
         name: 'Андрей',
         surname: 'Пятов',
-        month: 'февраль',
-        count: 1
+        month: 'Лучший в феврале',
+        count: 1,
+        src: 'Pyatov'
       },
       {
         name: '',
         surname: 'Тайсон',
-        month: 'март',
-        count: 1
+        month: 'Лучший в марте',
+        count: 1,
+        src: 'Tayson'
       },
       {
         name: '',
         surname: 'Эдуардо',
-        month: 'май',
-        count: 1
+        month: 'Лучший в мае',
+        count: 1,
+        src: 'Eduardo'
       }
     ];
 
