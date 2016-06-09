@@ -7,9 +7,9 @@ angular
     $scope.players = playersService.players;
 
     $scope.send = function(player) {
-      var localStorageKey = 'bestPlayerOfTheSeason02';
+      var localStorageKey = 'bestPlayerOfTheSeason03';
 
-      if (!simpleStorage.get(localStorageKey)) {
+      if (!store.get(localStorageKey)) {
         swal({
             title: "Лучшего игрока сезона: \n" + player.name + ' ' + player.surname,
             text: "Вы уверены?",
@@ -24,7 +24,7 @@ angular
           function (isConfirm) {
             if (isConfirm) {
               swal("Отправлено!", "Итоги голосования будут опубликованы на официальном сайте, следите за новостями!", "success");
-              simpleStorage.set(localStorageKey, player.name + ' ' + player.surname);
+              store.set(localStorageKey, player.name + ' ' + player.surname);
             } else {
               //swal("Отменено!", "", "error");
             }
@@ -32,7 +32,7 @@ angular
       } else {
         swal({
           title: "Ваш голос учтен!",
-          text: "Вы выбрали: " + simpleStorage.get(localStorageKey),
+          text: "Вы выбрали: " + store.get(localStorageKey),
           type: "info",
           showCancelButton: false,
           confirmButtonColor: "#DD6B55",

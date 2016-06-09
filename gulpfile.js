@@ -10,8 +10,7 @@ gulp.task('pre-build', function() {
 
   gulp.src([
     'bower_components/angular/angular.min.js',
-    'bower_components/sweetalert/dist/sweetalert.min.js',
-    'bower_components/simpleStorage/simpleStorage.min.js'
+    'bower_components/sweetalert/dist/sweetalert.min.js'
   ])
     .pipe(gulp.dest('build/lib'));
 });

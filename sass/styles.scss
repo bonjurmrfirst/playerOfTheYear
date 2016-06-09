@@ -58,13 +58,7 @@ $europeC: 'EuropeDemiC';
 
 body {
   background:
-  url(../img/bg.jpg)    /* image */
-  top left / 60% auto /* position / size */
-  //no-repeat                /* repeat */
-  //fixed                    /* attachment */
-  //padding-box              /* origin */
-  //content-box              /* clip */
-  //red;                     /* color */
+  url(../img/bg.jpg) top left / 60% auto;
 }
 
 .header {
@@ -167,7 +161,18 @@ body {
     }
 
     &:hover {
-      img {
+      cursor: pointer;
+      & img:first-child {
+        filter: grayscale(0);
+        -webkit-filter: brightness(120%);
+        -moz-filter: brightness(120%);
+        -o-filter: brightness(120%);
+        -ms-filter: brightness(120%);
+        transition: 0.5s;
+      }
+
+      &>img {
+        width: 122%;
         filter: grayscale(0);
         -webkit-filter: brightness(120%);
         -moz-filter: brightness(120%);

@@ -96,17 +96,17 @@ body {
   background: url(../img/bg.jpg) top left/60% auto;
 }
 
-/* line 70, ../../../sass/styles.scss */
+/* line 64, ../../../sass/styles.scss */
 .header {
   display: flex;
   justify-content: center;
   margin: 10px 0;
 }
-/* line 76, ../../../sass/styles.scss */
+/* line 70, ../../../sass/styles.scss */
 .header .left img {
   height: 120px;
 }
-/* line 80, ../../../sass/styles.scss */
+/* line 74, ../../../sass/styles.scss */
 .header .center {
   flex: 1 0 100px;
   height: 84px;
@@ -115,7 +115,7 @@ body {
   text-align: center;
   margin-top: 17px;
 }
-/* line 87, ../../../sass/styles.scss */
+/* line 81, ../../../sass/styles.scss */
 .header .center p {
   padding-left: 120px;
   margin-top: 35px;
@@ -124,7 +124,7 @@ body {
   font-size: 300%;
   text-transform: uppercase;
 }
-/* line 96, ../../../sass/styles.scss */
+/* line 90, ../../../sass/styles.scss */
 .header .center span {
   padding-left: 120px;
   margin-top: -40px;
@@ -133,39 +133,39 @@ body {
   font-size: 300%;
   text-transform: uppercase;
 }
-/* line 107, ../../../sass/styles.scss */
+/* line 101, ../../../sass/styles.scss */
 .header .right img {
   height: 120px;
 }
 
-/* line 113, ../../../sass/styles.scss */
+/* line 107, ../../../sass/styles.scss */
 .content {
   padding: 0 30%;
   text-align: center;
   margin-top: 60px;
 }
-/* line 117, ../../../sass/styles.scss */
+/* line 111, ../../../sass/styles.scss */
 .content p {
   font-family: "OfficinaSerifMediumC";
   text-transform: uppercase;
   color: #ff3000;
   min-width: 275px;
 }
-/* line 124, ../../../sass/styles.scss */
+/* line 118, ../../../sass/styles.scss */
 .content a img {
   height: 80px;
   margin-top: -20px;
   margin-bottom: 20px;
 }
 
-/* line 133, ../../../sass/styles.scss */
+/* line 127, ../../../sass/styles.scss */
 .playersContainer {
   display: flex;
   margin: 70px 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
-/* line 139, ../../../sass/styles.scss */
+/* line 133, ../../../sass/styles.scss */
 .playersContainer .player {
   flex: 1 0 auto;
   position: relative;
@@ -174,7 +174,7 @@ body {
   max-width: 250px;
   min-height: 350px;
 }
-/* line 146, ../../../sass/styles.scss */
+/* line 140, ../../../sass/styles.scss */
 .playersContainer .player img {
   position: absolute;
   margin-left: 35px;
@@ -187,20 +187,24 @@ body {
   -ms-filter: brightness(100%);
   transition: 0.5s;
 }
-/* line 158, ../../../sass/styles.scss */
+/* line 152, ../../../sass/styles.scss */
 .playersContainer .player .playerBg {
   position: absolute;
   margin-left: -40px;
   height: 300px;
   width: 100%;
 }
-/* line 163, ../../../sass/styles.scss */
+/* line 157, ../../../sass/styles.scss */
 .playersContainer .player .playerBg img {
   height: 100%;
   width: 100%;
 }
-/* line 170, ../../../sass/styles.scss */
-.playersContainer .player:hover img {
+/* line 163, ../../../sass/styles.scss */
+.playersContainer .player:hover {
+  cursor: pointer;
+}
+/* line 165, ../../../sass/styles.scss */
+.playersContainer .player:hover img:first-child {
   filter: grayscale(0);
   -webkit-filter: brightness(120%);
   -moz-filter: brightness(120%);
@@ -208,33 +212,43 @@ body {
   -ms-filter: brightness(120%);
   transition: 0.5s;
 }
-/* line 179, ../../../sass/styles.scss */
+/* line 174, ../../../sass/styles.scss */
+.playersContainer .player:hover > img {
+  width: 122%;
+  filter: grayscale(0);
+  -webkit-filter: brightness(120%);
+  -moz-filter: brightness(120%);
+  -o-filter: brightness(120%);
+  -ms-filter: brightness(120%);
+  transition: 0.5s;
+}
+/* line 184, ../../../sass/styles.scss */
 .playersContainer .player:hover .playerName p {
   color: #ff3000;
 }
-/* line 185, ../../../sass/styles.scss */
+/* line 190, ../../../sass/styles.scss */
 .playersContainer .player .playerName {
   position: absolute;
   top: 240px;
 }
-/* line 188, ../../../sass/styles.scss */
+/* line 193, ../../../sass/styles.scss */
 .playersContainer .player .playerName p {
   font-family: "OfficinaSerifExtraBoldC";
   font-size: x-large;
   color: #999999;
 }
-/* line 195, ../../../sass/styles.scss */
+/* line 200, ../../../sass/styles.scss */
 .playersContainer .player .playerInfo {
   margin-top: 305px;
   border-top: 2px solid #4b4b4b;
   padding-top: 5px;
 }
-/* line 199, ../../../sass/styles.scss */
+/* line 204, ../../../sass/styles.scss */
 .playersContainer .player .playerInfo .month {
   font-family: "OfficinaSerifBookC";
   color: #999999;
 }
-/* line 203, ../../../sass/styles.scss */
+/* line 208, ../../../sass/styles.scss */
 .playersContainer .player .playerInfo .count {
   display: block;
   font-family: "OfficinaSerifMediumC";
@@ -243,7 +257,7 @@ body {
   float: right;
 }
 
-/* line 214, ../../../sass/styles.scss */
+/* line 219, ../../../sass/styles.scss */
 .footer {
   bottom: 60px;
   height: 30px;
