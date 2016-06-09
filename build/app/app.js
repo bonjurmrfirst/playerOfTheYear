@@ -5,6 +5,43 @@ angular
 
   .controller('MainController', ['$scope', 'playersService', function($scope, playersService) {
     $scope.players = playersService.players;
+
+    $scope.send = function(player) {
+      var localStorageKey = 'bestPlayerOfTheSeason02';
+
+      if (!simpleStorage.get(localStorageKey)) {
+        swal({
+            title: "Лучшего игрока сезона: \n" + player.name + ' ' + player.surname,
+            text: "Вы уверены?",
+            type: "info",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Да, отправить!",
+            cancelButtonText: "Нет, вернуться к выбору игроков",
+            closeOnConfirm: false,
+            closeOnCancel: true
+          },
+          function (isConfirm) {
+            if (isConfirm) {
+              swal("Отправлено!", "Итоги голосования будут опубликованы на официальном сайте, следите за новостями!", "success");
+              simpleStorage.set(localStorageKey, player.name + ' ' + player.surname);
+            } else {
+              //swal("Отменено!", "", "error");
+            }
+          });
+      } else {
+        swal({
+          title: "Ваш голос учтен!",
+          text: "Вы выбрали: " + simpleStorage.get(localStorageKey),
+          type: "info",
+          showCancelButton: false,
+          confirmButtonColor: "#DD6B55",
+          confirmButtonText: "Закрыть",
+          closeOnConfirm: true
+        });
+      }
+    };
+
   }])
 
   .factory('playersService', function() {
@@ -12,42 +49,42 @@ angular
       {
         name: 'Алекс',
         surname: 'Тейшейра',
-        month: 'июль, сентябрь, октябрь, ноябрь, декабрь',
+        month: 'Лучший в июле, сентябре, октябре, ноябре, декабре',
         count: 5,
         src: 'Teixeira'
       },
       {
         name: '',
         surname: 'Марлос',
-        month: 'август, апрель',
+        month: 'Лучший в августе, апреле',
         count: 2,
         src: 'Marlos'
       },
       {
         name: 'Виктор',
         surname: 'Коваленко',
-        month: 'январь',
+        month: 'Лучший в январе',
         count: 1,
         src: 'Kovalenko'
       },
       {
         name: 'Андрей',
         surname: 'Пятов',
-        month: 'февраль',
+        month: 'Лучший в феврале',
         count: 1,
         src: 'Pyatov'
       },
       {
         name: '',
         surname: 'Тайсон',
-        month: 'март',
+        month: 'Лучший в марте',
         count: 1,
         src: 'Tayson'
       },
       {
         name: '',
         surname: 'Эдуардо',
-        month: 'май',
+        month: 'Лучший в мае',
         count: 1,
         src: 'Eduardo'
       }

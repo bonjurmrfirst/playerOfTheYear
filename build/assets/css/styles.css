@@ -77,128 +77,175 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
-/* line 33, ../../../sass/styles.scss */
-.header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 10px 40px 0 40px;
+@font-face {
+  font-family: 'OfficinaSerifBookC';
+  src: url("../fonts/OfficinaSerifBookC.eot");
+  src: url("../fonts/OfficinaSerifBookC.woff2") format("woff2"), url("../fonts/OfficinaSerifBookC.woff") format("woff"), url("../fonts/OfficinaSerifBookC.ttf") format("truetype"), url("../fonts/OfficinaSerifBookC.svg#OfficinaSerifBookC") format("svg"), url("../fonts/OfficinaSerifBookC.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
 }
-/* line 39, ../../../sass/styles.scss */
-.header .left img {
-  height: 70px;
+@font-face {
+  font-family: 'EuropeDemiC';
+  src: url("../fonts/EuropeDemiC.eot");
+  src: url("../fonts/EuropeDemiC.woff") format("woff"), url("../fonts/EuropeDemiC.ttf") format("truetype"), url("../fonts/EuropeDemiC.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
 }
-/* line 43, ../../../sass/styles.scss */
-.header .center {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 100px;
-  -moz-box-flex: 1;
-  -ms-flex: 1 0 100px;
-  flex: 1 0 100px;
-  height: 70px;
-  background-color: #ff3000;
-  min-width: 380px;
-  text-align: center;
-}
-/* line 49, ../../../sass/styles.scss */
-.header .center span {
-  line-height: 70px;
-  font-family: "OfficinaSerifExtraBoldC";
-  color: white;
-  font-size: 200%;
-  text-transform: uppercase;
-}
-/* line 58, ../../../sass/styles.scss */
-.header .right img {
-  height: 70px;
+/* line 59, ../../../sass/styles.scss */
+body {
+  background: url(../img/bg.jpg) top left/60% auto;
 }
 
-/* line 64, ../../../sass/styles.scss */
+/* line 70, ../../../sass/styles.scss */
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+/* line 76, ../../../sass/styles.scss */
+.header .left img {
+  height: 120px;
+}
+/* line 80, ../../../sass/styles.scss */
+.header .center {
+  flex: 1 0 100px;
+  height: 84px;
+  background-color: #ff3000;
+  min-width: 580px;
+  text-align: center;
+  margin-top: 17px;
+}
+/* line 87, ../../../sass/styles.scss */
+.header .center p {
+  padding-left: 120px;
+  margin-top: 35px;
+  font-family: "EuropeDemiC";
+  color: white;
+  font-size: 300%;
+  text-transform: uppercase;
+}
+/* line 96, ../../../sass/styles.scss */
+.header .center span {
+  padding-left: 120px;
+  margin-top: -40px;
+  font-family: "EuropeDemiC";
+  color: #ff3000;
+  font-size: 300%;
+  text-transform: uppercase;
+}
+/* line 107, ../../../sass/styles.scss */
+.header .right img {
+  height: 120px;
+}
+
+/* line 113, ../../../sass/styles.scss */
 .content {
   padding: 0 30%;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
 }
-/* line 68, ../../../sass/styles.scss */
+/* line 117, ../../../sass/styles.scss */
 .content p {
   font-family: "OfficinaSerifMediumC";
   text-transform: uppercase;
   color: #ff3000;
   min-width: 275px;
 }
+/* line 124, ../../../sass/styles.scss */
+.content a img {
+  height: 80px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
 
-/* line 77, ../../../sass/styles.scss */
+/* line 133, ../../../sass/styles.scss */
 .playersContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  margin: 50px 20px;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
+  margin: 70px 20px;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
-/* line 83, ../../../sass/styles.scss */
+/* line 139, ../../../sass/styles.scss */
 .playersContainer .player {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-  -moz-box-flex: 1;
-  -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   position: relative;
-  margin: 10px 10px;
+  margin: 20px 10px;
   min-width: 250px;
   max-width: 250px;
   min-height: 350px;
 }
-/* line 90, ../../../sass/styles.scss */
+/* line 146, ../../../sass/styles.scss */
 .playersContainer .player img {
   position: absolute;
-  margin-left: 40px;
-  width: 100%;
+  margin-left: 35px;
+  width: 120%;
+  margin-top: -40px;
+  filter: grayscale(0.85);
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+  transition: 0.5s;
 }
-/* line 95, ../../../sass/styles.scss */
+/* line 158, ../../../sass/styles.scss */
 .playersContainer .player .playerBg {
   position: absolute;
   margin-left: -40px;
   height: 300px;
   width: 100%;
 }
-/* line 100, ../../../sass/styles.scss */
+/* line 163, ../../../sass/styles.scss */
 .playersContainer .player .playerBg img {
   height: 100%;
   width: 100%;
 }
-/* line 106, ../../../sass/styles.scss */
+/* line 170, ../../../sass/styles.scss */
+.playersContainer .player:hover img {
+  filter: grayscale(0);
+  -webkit-filter: brightness(120%);
+  -moz-filter: brightness(120%);
+  -o-filter: brightness(120%);
+  -ms-filter: brightness(120%);
+  transition: 0.5s;
+}
+/* line 179, ../../../sass/styles.scss */
+.playersContainer .player:hover .playerName p {
+  color: #ff3000;
+}
+/* line 185, ../../../sass/styles.scss */
 .playersContainer .player .playerName {
   position: absolute;
   top: 240px;
 }
-/* line 109, ../../../sass/styles.scss */
+/* line 188, ../../../sass/styles.scss */
 .playersContainer .player .playerName p {
   font-family: "OfficinaSerifExtraBoldC";
   font-size: x-large;
   color: #999999;
 }
-/* line 116, ../../../sass/styles.scss */
+/* line 195, ../../../sass/styles.scss */
 .playersContainer .player .playerInfo {
   margin-top: 305px;
   border-top: 2px solid #4b4b4b;
+  padding-top: 5px;
 }
-/* line 122, ../../../sass/styles.scss */
+/* line 199, ../../../sass/styles.scss */
 .playersContainer .player .playerInfo .month {
+  font-family: "OfficinaSerifBookC";
+  color: #999999;
+}
+/* line 203, ../../../sass/styles.scss */
+.playersContainer .player .playerInfo .count {
+  display: block;
+  font-family: "OfficinaSerifMediumC";
+  font-size: 520%;
+  color: #999999;
   float: right;
+}
+
+/* line 214, ../../../sass/styles.scss */
+.footer {
+  bottom: 60px;
+  height: 30px;
+  background-color: #999999;
 }
