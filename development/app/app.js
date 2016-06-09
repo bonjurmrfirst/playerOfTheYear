@@ -7,11 +7,11 @@ angular
     $scope.players = playersService.players;
 
     $scope.send = function(player) {
-      var localStorageKey = 'bestPlayerOfTheSeason04';
+      var localStorageKey = 'bestPlayerOfTheSeason05';
 
       if (!store.get(localStorageKey)) {
         swal({
-            title: "Лучший игрока ayer.name + ' ' + player.surname,
+            title: "Лучшеий игрока сезона: \n" + player.name + ' ' + player.surname,
             text: "Вы уверены?",
             type: "info",
             showCancelButton: true,
